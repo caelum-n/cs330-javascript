@@ -41,10 +41,18 @@ Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
 
 ## Getting Started
 
-The first step to programming with JavaScript is to download the programming language.
+### What Do I Need?
+
+The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. There is no need to download the language itself, however, which might be unusual if you've ever come across Python or Java and had to download or update either of them.
+
+You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
+
+Next, we need to install a program that will let us write code and run it. The easiest way to do this is using an Integrated Developer Environment, or IDE. And IDE allows us to write code, run code, and debug code all in one program, which makes it really handy. I've chosen to use Visual Studio Code. VSCode can be downloaded [here](https://code.visualstudio.com/download) for MacOS, Windows, and Linux. Documentation can be found [here](https://code.visualstudio.com/docs) and you can read more from the [FAQ, here](https://code.visualstudio.com/docs/supporting/faq). I will be using VSCode throughout this project.
 
 
-2. Write a "hello world" program in that language (checking the Internet for one is fine but do (3))
+## Your First Program
+Let's write a simple program in JS to get a feel for how things work. 
+
 3. Run the program
 4. Be prepared to show me that you can run the program during lab
 Your write-up should address the following questions. Try to answer them in such a way that someone else would be able to follow your instructions and run your program:
@@ -53,3 +61,38 @@ Your write-up should address the following questions. Try to answer them in such
 how did you pick the one that you'll be using?
 3. How do you run programs in that language?
 4. How do you write comments in your language?
+
+
+
+Understanding how different types of data are represented in your programming language is a key step in being able to use it for bigger projects. Research the naming conventions in your language for variables (i.e., are they case sensitive? do they have to start with lower case letters? Can they start with numbers? Symbols? do programmers use underscores, as in "last_name", or do they use camel case (lastName))? Write a piece of code that creates variable of each of these common data types (where possible) and follows the naming conventions:
+• int
+• string
+• floating-point number
+• boolean
+• array/list
+• dictionary (sometimes called a hash or a map, depending on your language)
+Note that not all languages will have all of these built-in types, and some might have other primitive types (for example, most C-family languages have pointers). If your language has other primitive types or doesn’t include some of the above types, modify your code as necessary.
+In your example code, illustrate the important data type and operations features in your language. Write code that experiments with different operations applied on variables of the same data type and operations with variables of two different types: e.g. can you add ints and floats? Is the resulting variable an int (narrowing conversion) or a float (widening conversion)? What about division? Can you put different data types in the same array or list? Can one data type be converted to another either implicitly or explicitly (int to float, string to int, etc)?
+Discussion questions:
+1. Does your language have keywords or reserved words? How many?
+2. What are the naming requirements for variables in your language?
+What about naming conventions? Are those enforced by the compiler/interpreter, or just
+standards in the community?
+3. Is your language statically or dynamically typed?
+4. Strongly typed or weakly typed?
+5. Explicitly typed or implicitly typed?
+6. Are some variables mutable while others are immutable?
+7. What are the operators available for each data type?
+8. Are mixed type operations allowed? If so, how are they accommodated?
+9. At what point are identifier names and operator symbols bound in your language? For example
+if you declare a (variable, class name, function name), when is it bound to the type, address? When are operators (+,*, etc.) bound to their operations?
+CODING EXAMPLE demonstrating the features above
+1 Adapted with permission from Dr. Amber Stubbs
+   
+EXAMPLE OF (one) ILLUSTRATIVE EXAMPLE:
+If you put this line (or something similar) in a program and try to print x, what does it do?
+x = "5" + 6
+If it doesn't compile, why? Is there something you can do to make it compile?
+10. Describe the limitations (or lack thereof) of your programming language as they relate to the coding example portion of the assignment (adding ints and floats, storing different types in lists, converting between data types). Are there other restrictions or pitfalls that the documentation mentions that you need to be aware of?
+11. Are there built-in complex data types that are commonly used in your language? (hint: they’d probably appear fairly early in the documentation if so)
+
