@@ -2,7 +2,10 @@ Programming language project for CS330 at Simmons University (Fall 2023)
 
 # A Guide to JavaScript
 ## Table of Contents
-- [Introduction to JavaScript](##Introduction-to-JavaScript)
+- [Introduction to JavaScript](##introduction-to-javascript)
+- [Helpful Resources](##helpful-resources)
+- [Getting Started Yourself](##getting-started)
+- 
 
 ## Introduction to JavaScript
 
@@ -20,10 +23,33 @@ However, Netscape soon decided that it would be even better for Eich to develop 
 
 In the same year, Microsoft debuted Internet Explorer, which began a browser war between Internet Explorer and Netscape Navigator. 
 
+
+
+Nowadays, JavaScript is also used in many other areas such as server-side development, mobile app development and so on.
+
+
+
 Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
 
-## Helpful Resources for Programming in JavaScript
+## Helpful Resources 
+### for Programming in JavaScript
 - JavaScript documentation:
   - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   - [devdocs.io](https://devdocs.io/javascript/)
 - [w3schools](https://www.w3schools.com)
+
+
+## Getting Started
+
+The first step to programming with JavaScript is to download the programming language.
+
+
+2. Write a "hello world" program in that language (checking the Internet for one is fine but do (3))
+3. Run the program
+4. Be prepared to show me that you can run the program during lab
+Your write-up should address the following questions. Try to answer them in such a way that someone else would be able to follow your instructions and run your program:
+1. What did you need to do to install the language?
+2. Does this language come with a recommended programming environment? What is it? If not,
+how did you pick the one that you'll be using?
+3. How do you run programs in that language?
+4. How do you write comments in your language?
