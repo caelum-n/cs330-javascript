@@ -1,6 +1,8 @@
 Programming language project for CS330 at Simmons University (Fall 2023)
 
 # A Guide to JavaScript
+## Table of Contents
+- [Introduction to JavaScript](##Introduction-to-JavaScript)
 
 ## Introduction to JavaScript
 
