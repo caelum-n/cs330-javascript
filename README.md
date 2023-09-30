@@ -1,12 +1,14 @@
 Programming language project for CS330 at Simmons University (Fall 2023)
 
 # A Guide to JavaScript
+___
 ## Table of Contents
 - [Introduction to JavaScript](##introduction-to-javascript)
 - [Helpful Resources](##helpful-resources)
 - [Getting Started Yourself](##getting-started)
 - [Data Types](#data-types)
 
+___
 ## Introduction to JavaScript
 
 ### What Is JavaScript?
@@ -29,17 +31,20 @@ JS was invented in 1995 by [**Brendan Eich**](/moreInfo.md#a-less-brief-history)
 
 Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
 
+___
 ## Helpful Resources 
-### for Programming in JavaScript
+### Programming in JavaScript
 - JavaScript documentation:
   - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   - [devdocs.io](https://devdocs.io/javascript/)
 - [w3schools](https://www.w3schools.com)
 
-
+___
 ## Getting Started
 
 ### What Do I Need?
+
+**A Web Browser with JavaScript Enabled**
 
 The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. There is no need to download the language itself, however, which might be unusual if you've ever come across Python or Java and had to download or update either of them.
 
