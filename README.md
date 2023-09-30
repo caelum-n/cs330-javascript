@@ -1,7 +1,7 @@
 Programming language project for CS330 at Simmons University (Fall 2023)
 
 # A Guide to JavaScript
-___
+***
 ## Table of Contents
 - [Introduction to JavaScript](##introduction-to-javascript)
 - [Helpful Resources](##helpful-resources)
@@ -21,7 +21,7 @@ JavaScript is used in many more ways today than ever. Historically, Java had bee
 
 Nowadays, JavaScript is also used in many other areas such as server-side development, mobile app development and so on.
 
-### Node.js
+### What is Node.js?
 
 Node.js was created in 2009 by Ryan Dahl
 
@@ -48,34 +48,87 @@ ___
 
 The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. There is no need to download the language itself, however, which might be unusual if you've ever come across Python or Java and had to download or update either of them.
 
+**Downloading Node.js**
+
 You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
+
+**Integrated Developer Environment**
 
 Next, we need to install a program that will let us write code and run it. The easiest way to do this is using an Integrated Developer Environment, or IDE. And IDE allows us to write code, run code, and debug code all in one program, which makes it really handy. I've chosen to use Visual Studio Code. VSCode can be downloaded [here](https://code.visualstudio.com/download) for MacOS, Windows, and Linux. Documentation can be found [here](https://code.visualstudio.com/docs) and you can read more from the [FAQ, here](https://code.visualstudio.com/docs/supporting/faq). I will be using VSCode throughout this project.
 
+<!-- **Text Editor and Browser** -->
 
 ## Your First Program
-Let's write a simple program in JS to get a feel for how things work. 
+
+I have created a folder of sample code files, which can be found [here](/codeFiles/). I recommend downloading these files and opening them in VSCode to see what the code looks like. There should be 2 files in the folder. They are called:
+- helloWorld.js
+- hello.html
+
 
 3. Run the program
 4. Be prepared to show me that you can run the program during lab
+
 Your write-up should address the following questions. Try to answer them in such a way that someone else would be able to follow your instructions and run your program:
-1. What did you need to do to install the language?
-2. Does this language come with a recommended programming environment? What is it? If not,
-how did you pick the one that you'll be using?
+
 3. How do you run programs in that language?
 4. How do you write comments in your language?
 
+**Comments**
+
+Comments are an important part of any programming language. Comments are pieces of text which are ignored when the code is run. They serve to communicate what chunks of code do.
+
+Two forward slashes indicate a single-line comment in JavaScript, as seen below:
+
+`// This is a comment in JavaScript`
+
+A comment can also contain multiple lines. A multi-line comment is indicated by a forward slash followed by an asterisk. The end of the comment is indicated with an asterisk followed by a forward slash. 
+
+`/* This is also a comment in JavaScript*/`
+
+Any lines within the multi-line comment indicators must include an asterisk at the beginning of the line:
+
+```
+/* This comment
+* has multiple lines.
+*/
+```
+
+
+
+
+
 # Data Types
 
-Understanding how different types of data are represented in your programming language is a key step in being able to use it for bigger projects. Research the naming conventions in your language for variables (i.e., are they case sensitive? do they have to start with lower case letters? Can they start with numbers? Symbols? do programmers use underscores, as in "last_name", or do they use camel case (lastName))? Write a piece of code that creates variable of each of these common data types (where possible) and follows the naming conventions:
-• int
-• string
-• floating-point number
-• boolean
-• array/list
-• dictionary (sometimes called a hash or a map, depending on your language)
-Note that not all languages will have all of these built-in types, and some might have other primitive types (for example, most C-family languages have pointers). If your language has other primitive types or doesn’t include some of the above types, modify your code as necessary.
-In your example code, illustrate the important data type and operations features in your language. Write code that experiments with different operations applied on variables of the same data type and operations with variables of two different types: e.g. can you add ints and floats? Is the resulting variable an int (narrowing conversion) or a float (widening conversion)? What about division? Can you put different data types in the same array or list? Can one data type be converted to another either implicitly or explicitly (int to float, string to int, etc)?
+## What are variables?
+## Types of variables 
+    
+Write a piece of code that creates variable of each of these common data types (where possible) and follows the naming conventions:
+- int
+- string
+- floating-point number
+- boolean
+- array/list
+- dictionary (sometimes called a hash or a map, depending on your language)
+
+## Good Practices 
+naming conventions in your language for variables
+  are they case sensitive? 
+  do they have to start with lower case letters? 
+  Can they start with numbers? Symbols? 
+  do programmers use underscores, as in "last_name", 
+    or do they use camel case (lastName)?
+
+Note that not all languages will have all of these built-in types, and some might have other primitive types (for example, most C-family languages have pointers). 
+    If your language has other primitive types or doesn’t include some of the above types, modify your code as necessary.
+
+In your example code, illustrate the important data type and operations features in your language.
+  Write code that experiments with different operations applied on variables of the same data type and operations with variables of two different types: e.g. 
+    can you add ints and floats? 
+    Is the resulting variable an int (narrowing conversion) or a float (widening conversion)? 
+    What about division? 
+    Can you put different data types in the same array or list? 
+    Can one data type be converted to another either implicitly or explicitly (int to float, string to int, etc)?
+
 Discussion questions:
 1. Does your language have keywords or reserved words? How many?
 2. What are the naming requirements for variables in your language?
