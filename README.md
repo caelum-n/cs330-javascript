@@ -66,9 +66,13 @@ I have created a folder of sample code files, which can be found [here](/codeFil
 
 ## How do you run programs in JavaScript?
 
-**Comments**
+## Comments
 
-Comments are an important part of any programming language. Comments are pieces of text which are ignored when the code is run. They serve to communicate what chunks of code do.
+Comments are an important part of any programming language. Comments are pieces of text which are ignored when the code is run. They serve to communicate what different chunks of code do, or otherwise tell humans reading the comments information not as easily discerned by looking at the code alone.
+
+Comments can also be used when writing a program to make the program ignore parts of the code. This can help determine the source of an error or misbehaving code.
+
+**How do we write comments in JavaScript?**
 
 Two forward slashes indicate a single-line comment in JavaScript, as seen below:
 
@@ -80,11 +84,11 @@ A comment can also contain multiple lines. A multi-line comment is indicated by 
 
 Any lines within the multi-line comment indicators must include an asterisk at the beginning of the line:
 
-`
-/* This comment
-* has multiple lines.
-*/
-`
+
+``/* This comment``
+```* has multiple lines.```
+``*/``
+
 
 
 
