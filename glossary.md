@@ -27,6 +27,7 @@ HTML is a [markup language](#markup-language) used to structure and organize web
 
 ### markup language
 
+### [scripting language](https://en.wikipedia.org/wiki/Scripting_language)
 
 ### [text-based user interface (TUI) (alt. terminal user interfaces)](https://en.wikipedia.org/wiki/Text-based_user_interface)
 describes the type of user interface used before the advent of bitmapped displays and modern conventional [graphical user interfaces (GUIs)](#gui---graphical-user-interface). Like modern GUIs, they can use the entire screen area and may accept mouse and other inputs. They may also use color and often structure the display using box-drawing characters such as ┌ and ╣. The modern context of use is usually a terminal emulator.

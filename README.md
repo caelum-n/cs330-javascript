@@ -60,18 +60,11 @@ Next, we need to install a program that will let us write code and run it. The e
 
 ## Your First Program
 
-I have created a folder of sample code files, which can be found [here](/codeFiles/). I recommend downloading these files and opening them in VSCode to see what the code looks like. There should be 2 files in the folder. They are called:
+I have created a folder of sample code files, which can be found [here](/codeFiles/). To start, download the folder of sample files. There should be 2 files in the folder. They are called:
 - helloWorld.js
 - hello.html
 
-
-3. Run the program
-4. Be prepared to show me that you can run the program during lab
-
-Your write-up should address the following questions. Try to answer them in such a way that someone else would be able to follow your instructions and run your program:
-
-3. How do you run programs in that language?
-4. How do you write comments in your language?
+## How do you run programs in JavaScript?
 
 **Comments**
 
@@ -83,15 +76,15 @@ Two forward slashes indicate a single-line comment in JavaScript, as seen below:
 
 A comment can also contain multiple lines. A multi-line comment is indicated by a forward slash followed by an asterisk. The end of the comment is indicated with an asterisk followed by a forward slash. 
 
-`/* This is also a comment in JavaScript*/`
+`/* This is also a comment in JavaScript */`
 
 Any lines within the multi-line comment indicators must include an asterisk at the beginning of the line:
 
-```
+`
 /* This comment
 * has multiple lines.
 */
-```
+`
 
 
 
