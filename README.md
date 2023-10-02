@@ -85,9 +85,11 @@ A comment can also contain multiple lines. A multi-line comment is indicated by 
 Any lines within the multi-line comment indicators must include an asterisk at the beginning of the line:
 
 
-```/* This comment
+```
+/* This comment
 * has multiple lines.
-*/ ```
+*/ 
+```
 
 
 
