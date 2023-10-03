@@ -31,9 +31,9 @@ Node.js was created in 2009 by Ryan Dahl
 
 ### A Brief History 
 
-JS was invented in 1995 by [**Brendan Eich**](/moreInfo.md#a-less-brief-history), who was hired by the Netscape Corporation to embed a scripting language in their browser, Navigator. Navigator was one of the first popular web browsers with a Graphical User Interface (GUI), allowing web browsing to spread through much wider, non-technical circles. Eich was originally hired to embed the programming language Scheme into Navigator, but it was soon decided that Eich would develop a new scripting language more similar to the Java programming language, instead of extant scripting languages like Scheme. Thus, LiveScript was born--and then it became JavaScript.
+JS was invented in 1995 by [**Brendan Eich**](/moreInfo.md#a-less-brief-history), who was hired by the Netscape Corporation to embed a scripting language in their browser, Navigator. Navigator was one of the first popular web browsers with a Graphical User Interface (GUI), allowing web browsing to spread through much wider, non-technical circles. Eich was originally hired to embed the programming language Scheme into Navigator, but it was soon decided that Eich would develop a new scripting language more similar to the Java programming language, instead of extant scripting languages like Scheme. Thus, LiveScript was born--and then it became JavaScript.[^1]
 
-Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
+[^1]//en.wikipedia.org/wiki/JavaScript
 
 ___
 ## Helpful Resources 
@@ -51,7 +51,12 @@ ___
 
 **A Web Browser with JavaScript Enabled**
 
-The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. There is no need to download the language itself, however, which might be unusual if you've ever come across Python or Java and had to download or update either of them.
+The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. I will be using Safari, which comes built in on Mac computers (which I'm using). Other popular browsers include Google Chrome[^2] and Mozilla Firefox[^3]. Windows machines come built in with Microsoft Edge.
+
+[^3]https://www.mozilla.org/en-US/firefox/new/
+[^4]https://www.google.com/chrome/
+
+There is no need to download the JavaScript language itself, however, which might be unusual for some Python or Java users.
 
 **Downloading Node.js**
 
@@ -108,10 +113,18 @@ ___
 
 ### What are variables?
 
-In general, a variable is a placeholder for a value. As the name suggests, we use placeholders because the value can __vary__ or change in different scenarios.
+In general, a variable is a placeholder for a value. As the name suggests, we use placeholders because the value can __vary__ or change in different scenarios. 
+
+In the natural sciences, variables refer to any factor in an experiment that a scientist may control and change in specific ways. In math, variables represent mathematical objects[^4]--so, numbers, sets of numbers, functions, expressions, and other fun math stuff. In very general terms, mathematicians use variables to understand patterns.
+
+In programming, variables are somewhere between and outside either of those definitions. 
+
+[^4]https://en.wikipedia.org/wiki/Variable_(mathematics)
+
 > [!WARNING]
 > EDIT SECTION
-In programming, variables more broadly describe a name given to certain information in a program that we want to use later on. You might think of a variable as a (metaphorical) storage box in computer memory. We know the name of the box because we labeled it, but not necessarily what is inside the box. We can then reference this box later, even without having to know the exact value inside the box. 
+It might be useful to think about this concept in relation to something in the physical world. Variables can be thought of as storage containers
+ We know the name of the box because we labeled it, but not necessarily what is inside the box. We can then reference this box later, even without having to know the exact value inside the box. 
 
 Let's look at an example. Below is a block of code that asks a user for two numbers, then finds the sum of these two numbers. We need to save the user's information to use later in the program (when we add the values together). We also use variables to represent these values because we don't know what numbers the user will choose at the time we are writing the program.
 
