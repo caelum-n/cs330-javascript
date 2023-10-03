@@ -1,12 +1,12 @@
 Programming language project for CS330 at Simmons University (Fall 2023)
 
 # A Guide to JavaScript
-***
+___
 ## Table of Contents
-- [Introduction to JavaScript](##introduction-to-javascript)
-- [Helpful Resources](##helpful-resources)
-- [Getting Started Yourself](##getting-started)
-- [Data Types](#data-types)
+- [Introduction to JavaScript](#introduction-to-javascript)
+- [Helpful Resources](#helpful-resources)
+- [Getting Started Yourself](#getting-started)
+- [Data Types](#data-types-in-js)
 
 ___
 ## Introduction to JavaScript
@@ -17,12 +17,16 @@ JavaScript, or JS, is one of several programming languages at the core of websit
 
 ### What's It Used For?
 
-JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009], JavaScript usage began to spread outside of browser usage.
+JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009](), JavaScript began to spread outside of browser usage.
 
+> [!WARNING]
+> EDIT SECTION
 Nowadays, JavaScript is also used in many other areas such as server-side development, mobile app development and so on.
 
 ### What is Node.js?
 
+> [!WARNING]
+> EDIT SECTION
 Node.js was created in 2009 by Ryan Dahl
 
 ### A Brief History 
@@ -33,6 +37,7 @@ Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
 
 ___
 ## Helpful Resources 
+
 ### Programming in JavaScript
 - JavaScript documentation:
   - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -52,21 +57,25 @@ The first step to programming with JavaScript is to have a working web browser w
 
 You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
 
+> [!WARNING]
+> EDIT SECTION
+Node.js allows us to_________________________
+
 **Integrated Developer Environment**
 
 Next, we need to install a program that will let us write code and run it. The easiest way to do this is using an Integrated Developer Environment, or IDE. And IDE allows us to write code, run code, and debug code all in one program, which makes it really handy. I've chosen to use Visual Studio Code. VSCode can be downloaded [here](https://code.visualstudio.com/download) for MacOS, Windows, and Linux. Documentation can be found [here](https://code.visualstudio.com/docs) and you can read more from the [FAQ, here](https://code.visualstudio.com/docs/supporting/faq). I will be using VSCode throughout this project.
 
 <!-- **Text Editor and Browser** -->
-
+___
 ## Your First Program
 
 I have created a folder of sample code files, which can be found [here](/codeFiles/). To start, download the folder of sample files. There should be 2 files in the folder. They are called:
 - helloWorld.js
 - hello.html
 
-## How do you run programs in JavaScript?
+### How do you run programs in JavaScript?
 
-## Comments
+### Comments
 
 Comments are an important part of any programming language. Comments are pieces of text which are ignored when the code is run. They serve to communicate what different chunks of code do, or otherwise tell humans reading the comments information not as easily discerned by looking at the code alone.
 
@@ -76,11 +85,15 @@ Comments can also be used when writing a program to make the program ignore part
 
 Two forward slashes indicate a single-line comment in JavaScript, as seen below:
 
-`// This is a comment in JavaScript`
+`
+// This is a comment in JavaScript
+`
 
 A comment can also contain multiple lines. A multi-line comment is indicated by a forward slash followed by an asterisk. The end of the comment is indicated with an asterisk followed by a forward slash. 
 
-`/* This is also a comment in JavaScript */`
+`
+/* This is also a comment in JavaScript */
+`
 
 Any lines within the multi-line comment indicators must include an asterisk at the beginning of the line:
 
@@ -90,16 +103,19 @@ Any lines within the multi-line comment indicators must include an asterisk at t
 * has multiple lines.
 */ 
 ```
+___
+## Data Types In JS
 
+### What are variables?
 
+In general, a variable is a placeholder for a value. As the name suggests, we use placeholders because the value can __vary__ or change in different scenarios.
+> [!WARNING]
+> EDIT SECTION
+In programming, variables more broadly describe a name given to certain information in a program that we want to use later on. You might think of a variable as a (metaphorical) storage box in computer memory. We know the name of the box because we labeled it, but not necessarily what is inside the box. We can then reference this box later, even without having to know the exact value inside the box. 
 
+Let's look at an example. Below is a block of code that asks a user for two numbers, then finds the sum of these two numbers. We need to save the user's information to use later in the program (when we add the values together). We also use variables to represent these values because we don't know what numbers the user will choose at the time we are writing the program.
 
-
-
-# Data Types
-
-## What are variables?
-## Types of variables 
+### Types of variables 
     
 Write a piece of code that creates variable of each of these common data types (where possible) and follows the naming conventions:
 - int
@@ -108,6 +124,13 @@ Write a piece of code that creates variable of each of these common data types (
 - boolean
 - array/list
 - dictionary (sometimes called a hash or a map, depending on your language)
+
+6. Are some variables mutable while others are immutable?
+7. What are the operators available for each data type?
+8. Are mixed type operations allowed? If so, how are they accommodated?
+9. At what point are identifier names and operator symbols bound in your language? For example
+if you declare a (variable, class name, function name), when is it bound to the type, address? When are operators (+,*, etc.) bound to their operations?
+
 
 ## Good Practices 
 naming conventions in your language for variables
@@ -128,21 +151,21 @@ In your example code, illustrate the important data type and operations features
     Can you put different data types in the same array or list? 
     Can one data type be converted to another either implicitly or explicitly (int to float, string to int, etc)?
 
-Discussion questions:
-1. Does your language have keywords or reserved words? How many?
-2. What are the naming requirements for variables in your language?
+### Reserved words
+
+### Naming Variables
+
+**Requirements**
+**Conventions**
 What about naming conventions? Are those enforced by the compiler/interpreter, or just
 standards in the community?
+
+### Typing Style
 3. Is your language statically or dynamically typed?
 4. Strongly typed or weakly typed?
 5. Explicitly typed or implicitly typed?
-6. Are some variables mutable while others are immutable?
-7. What are the operators available for each data type?
-8. Are mixed type operations allowed? If so, how are they accommodated?
-9. At what point are identifier names and operator symbols bound in your language? For example
-if you declare a (variable, class name, function name), when is it bound to the type, address? When are operators (+,*, etc.) bound to their operations?
+
 CODING EXAMPLE demonstrating the features above
-1 Adapted with permission from Dr. Amber Stubbs
    
 EXAMPLE OF (one) ILLUSTRATIVE EXAMPLE:
 If you put this line (or something similar) in a program and try to print x, what does it do?
@@ -151,3 +174,5 @@ If it doesn't compile, why? Is there something you can do to make it compile?
 10. Describe the limitations (or lack thereof) of your programming language as they relate to the coding example portion of the assignment (adding ints and floats, storing different types in lists, converting between data types). Are there other restrictions or pitfalls that the documentation mentions that you need to be aware of?
 11. Are there built-in complex data types that are commonly used in your language? (hint: they’d probably appear fairly early in the documentation if so)
 
+> [!WARNING]
+> EDIT SECTION
