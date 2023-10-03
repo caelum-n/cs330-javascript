@@ -17,17 +17,19 @@ JavaScript, or JS, is one of several programming languages at the core of websit
 
 ### What's It Used For?
 
-JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009](), JavaScript began to spread outside of browser usage.
-
-> [!WARNING]
-> EDIT SECTION
-Nowadays, JavaScript is also used in many other areas such as server-side development, mobile app development and so on.
+JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009](), JavaScript began to spread outside of browser usage. Now, JavaScript is used in server-side development, mobile app development and more.
 
 ### What is Node.js?
 
 > [!WARNING]
 > EDIT SECTION
 Node.js was created in 2009 by Ryan Dahl
+
+ [!WARNING]
+> EDIT SECTION
+Node.js allows us to_________________________
+
+Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
 
 ### A Brief History 
 
@@ -60,11 +62,7 @@ There is no need to download the JavaScript language itself, however, which migh
 
 **Downloading Node.js**
 
-You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
-
-> [!WARNING]
-> EDIT SECTION
-Node.js allows us to_________________________
+You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder (or wherever you save your downloads) and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
 
 **Integrated Developer Environment**
 
@@ -110,6 +108,7 @@ Any lines within the multi-line comment indicators must include an asterisk at t
 ```
 ___
 ## Data Types In JS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 ### What are variables?
 
@@ -117,16 +116,35 @@ In general, a variable is a placeholder for a value. As the name suggests, we us
 
 In the natural sciences, variables refer to any factor in an experiment that a scientist may control and change in specific ways. In math, variables represent mathematical objects[^4]--so, numbers, sets of numbers, functions, expressions, and other fun math stuff. In very general terms, mathematicians use variables to understand patterns.
 
-In programming, variables are somewhere between and outside either of those definitions. 
-
 [^4]https://en.wikipedia.org/wiki/Variable_(mathematics)
 
-> [!WARNING]
-> EDIT SECTION
-It might be useful to think about this concept in relation to something in the physical world. Variables can be thought of as storage containers
- We know the name of the box because we labeled it, but not necessarily what is inside the box. We can then reference this box later, even without having to know the exact value inside the box. 
+In programming, variables are used to label and store data in computer memory for future use. You can think of them as containers for storing information you might need later. For example, we might want to store two numbers, so later in the program we can add them together.
 
-Let's look at an example. Below is a block of code that asks a user for two numbers, then finds the sum of these two numbers. We need to save the user's information to use later in the program (when we add the values together). We also use variables to represent these values because we don't know what numbers the user will choose at the time we are writing the program.
+```
+num1 = 10;
+num2 = 15;
+
+sum = num1 + num2; // calculate sum of num1 & num2
+console.log(sum); // display sum
+```
+### Declaring variables
+
+JavaScript is a **dynamically typed** language, which means that 
+
+
+There are four ways to declare a variable in JS. 
+
+Automatically
+Using var
+Using let
+Using const
+
+
+1. Always declare variables
+2. Always use const if the value should not be changed
+3. Always use const if the type should not be changed (Arrays and Objects)
+4. Only use let if you can't use const
+5. Only use var if you MUST support old browsers.
 
 ### Types of variables 
     
@@ -146,6 +164,7 @@ if you declare a (variable, class name, function name), when is it bound to the 
 
 
 ## Good Practices 
+https://www.w3schools.com/js/js_variables.asp
 naming conventions in your language for variables
   are they case sensitive? 
   do they have to start with lower case letters? 
