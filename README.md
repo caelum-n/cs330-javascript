@@ -35,7 +35,7 @@ Node.js is a cross-platform, open-source server environment that can run on Wind
 
 JS was invented in 1995 by [**Brendan Eich**](/moreInfo.md#a-less-brief-history), who was hired by the Netscape Corporation to embed a scripting language in their browser, Navigator. Navigator was one of the first popular web browsers with a Graphical User Interface (GUI), allowing web browsing to spread through much wider, non-technical circles. Eich was originally hired to embed the programming language Scheme into Navigator, but it was soon decided that Eich would develop a new scripting language more similar to the Java programming language, instead of extant scripting languages like Scheme. Thus, LiveScript was born--and then it became JavaScript.[^1]
 
-[^1]//en.wikipedia.org/wiki/JavaScript
+[^1]: //en.wikipedia.org/wiki/JavaScript
 
 ___
 ## Helpful Resources 
@@ -55,8 +55,8 @@ ___
 
 The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. I will be using Safari, which comes built in on Mac computers (which I'm using). Other popular browsers include Google Chrome[^2] and Mozilla Firefox[^3]. Windows machines come built in with Microsoft Edge.
 
-[^3]https://www.mozilla.org/en-US/firefox/new/
-[^4]https://www.google.com/chrome/
+[^2]: https://www.google.com/chrome/
+[^3]: https://www.mozilla.org/en-US/firefox/new/
 
 There is no need to download the JavaScript language itself, however, which might be unusual for some Python or Java users.
 
@@ -116,7 +116,7 @@ In general, a variable is a placeholder for a value. As the name suggests, we us
 
 In the natural sciences, variables refer to any factor in an experiment that a scientist may control and change in specific ways. In math, variables represent mathematical objects[^4]--so, numbers, sets of numbers, functions, expressions, and other fun math stuff. In very general terms, mathematicians use variables to understand patterns.
 
-[^4]https://en.wikipedia.org/wiki/Variable_(mathematics)
+[^4]: https://en.wikipedia.org/wiki/Variable_(mathematics)
 
 In programming, variables are used to label and store data in computer memory for future use. You can think of them as containers for storing information you might need later. For example, we might want to store two numbers, so later in the program we can add them together.
 
