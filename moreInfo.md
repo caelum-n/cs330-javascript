@@ -20,7 +20,7 @@ Source: [JavaScript Wiki](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Scripting Languages
 
-[wiki](https://en.wikipedia.org/wiki/Scripting_language)
+[wikipedia](https://en.wikipedia.org/wiki/Scripting_language)
 
 ### ECMA International
 

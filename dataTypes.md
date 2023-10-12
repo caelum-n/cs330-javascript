@@ -1,7 +1,7 @@
-## Data Types In JS
+# Data Types In JS
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
-### What are variables?
+## What are variables?
 
 In general, a variable is a placeholder for a value. As the name suggests, we use placeholders because the value can __vary__ or change in different scenarios. 
 
@@ -18,7 +18,7 @@ num2 = 15;
 sum = num1 + num2; // calculate sum of num1 & num2
 console.log(sum); // display sum
 ```
-### Declaring variables
+## Declaring variables
 
 JavaScript is a **dynamically typed** language, which means that 
 
@@ -36,6 +36,10 @@ Using const
 3. Always use const if the type should not be changed (Arrays and Objects)
 4. Only use let if you can't use const
 5. Only use var if you MUST support old browsers.
+
+### var
+### let
+### const
 
 ### Types of variables 
     

@@ -1,8 +1,8 @@
-## Getting Started
+# Getting Started
 
-### What Do I Need?
+## What Do I Need?
 
-**A Web Browser with JavaScript Enabled**
+### A Web Browser with JavaScript Enabled
 
 The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. I will be using Safari, which comes built in on Mac computers (which I'm using). Other popular browsers include Google Chrome[^2] and Mozilla Firefox[^3]. Windows machines come built in with Microsoft Edge.
 
@@ -11,11 +11,21 @@ The first step to programming with JavaScript is to have a working web browser w
 
 There is no need to download the JavaScript language itself, however, which might be unusual for some Python or Java users.
 
-**Downloading Node.js**
+### Downloading Node.js
 
 You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder (or wherever you save your downloads) and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
 
-**Integrated Developer Environment**
+**What is Node.js?**
+
+Node.js is an open-source, cross-platform runtime environment, which allows JavaScript to run without using a browser. Sound confusing? Let's break it down.
+
+**Open source:** Node.js is available publicly for free and maintained by contributors around the world, rather than one specific company.
+
+**Cross-platform:** Node.js runs on Windows, Linux, Unix, macOS, etc. and is not limited to one operating system.
+
+**Runtime environment:** This just means that that Node.js allows you to run your code. Without it, you would need to use a browser to run your JavaScript code because browsers come with the built-in ability to execute JS code.
+
+### Integrated Developer Environment
 
 Next, we need to install a program that will let us write code and run it. The easiest way to do this is using an Integrated Developer Environment, or IDE. And IDE allows us to write code, run code, and debug code all in one program, which makes it really handy. I've chosen to use Visual Studio Code. VSCode can be downloaded [here](https://code.visualstudio.com/download) for MacOS, Windows, and Linux. Documentation can be found [here](https://code.visualstudio.com/docs) and you can read more from the [FAQ, here](https://code.visualstudio.com/docs/supporting/faq). I will be using VSCode throughout this project.
 
@@ -23,11 +33,12 @@ Next, we need to install a program that will let us write code and run it. The e
 ___
 ## Your First Program
 
-I have created a folder of sample code files, which can be found [here](/codeFiles/). To start, download the folder of sample files. There should be 2 files in the folder. They are called:
-- helloWorld.js
-- hello.html
+I have created a folder of sample code files, which can be found [here](/codeFiles/). To start, download the folder of sample files. Once you've done that, try opening helloWorld.js in VSCode. This is a simple program; it contains only one line of code, shown below: 
+`
+console.log("Hello World!");
+`
 
-### How do you run programs in JavaScript?
+If you run this, it will display the words "Hello World!" in the terminal/console. This is where Node.js comes in--it allows us to run JavaScript without needing a browser.
 
 ### Comments
 

@@ -17,19 +17,7 @@ JavaScript, or JS, is one of several programming languages at the core of websit
 
 ### What's It Used For?
 
-JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009](), JavaScript began to spread outside of browser usage. Now, JavaScript is used in server-side development, mobile app development and more.
-
-### What is Node.js?
-
-> [!WARNING]
-> EDIT SECTION
-Node.js was created in 2009 by Ryan Dahl
-
- [!WARNING]
-> EDIT SECTION
-Node.js allows us to_________________________
-
-Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
+JavaScript is used in many more ways today than ever. Historically, Java had been used primarily on the client side to add scripted behavior. It remains the dominant client-side language of the web. However, after the [creation of Node.js in 2009](), JavaScript began to spread outside of browser usage. Now, JavaScript is used in server-side development, mobile app development, and more.
 
 ### A Brief History 
 
