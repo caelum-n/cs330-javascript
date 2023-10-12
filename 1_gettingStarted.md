@@ -4,14 +4,14 @@
 
 ### A Web Browser with JavaScript Enabled
 
-The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. I will be using Safari, which comes built in on Mac computers (which I'm using). Other popular browsers include Google Chrome[^2] and Mozilla Firefox[^3]. Windows machines come built in with Microsoft Edge.
+The first step to programming with JavaScript is to have a working web browser with JavaScript enabled. I will be using Safari, which comes built in on Mac computers (which I'm using). Other popular browsers include Google Chrome[^1] and Mozilla Firefox[^2]. Windows machines come built in with Microsoft Edge.
 
-[^2]: https://www.google.com/chrome/
-[^3]: https://www.mozilla.org/en-US/firefox/new/
+[^1]: https://www.google.com/chrome/
+[^2]: https://www.mozilla.org/en-US/firefox/new/
 
 There is no need to download the JavaScript language itself, however, which might be unusual for some Python or Java users.
 
-### Downloading Node.js
+### Download Node.js
 
 You also want to download Node.js by following the link [here](https://nodejs.org/en/download) and downloading the correct installer for your platform. Open the installer from your Downloads folder (or wherever you save your downloads) and follow the instructions. More information about Node.js can be found [here](https://nodejs.org/en/about) and documentation can be found [here](https://nodejs.org/en/docs).
 
@@ -19,11 +19,24 @@ You also want to download Node.js by following the link [here](https://nodejs.or
 
 Node.js is an open-source, cross-platform runtime environment, which allows JavaScript to run without using a browser. Sound confusing? Let's break it down.
 
-**Open source:** Node.js is available publicly for free and maintained by contributors around the world, rather than one specific company.
+__Open source:__ Node.js is available publicly for free and maintained by contributors around the world, rather than one specific company.
 
-**Cross-platform:** Node.js runs on Windows, Linux, Unix, macOS, etc. and is not limited to one operating system.
+__Cross-platform:__ Node.js runs on Windows, Linux, Unix, macOS, etc. and is not limited to one operating system.
 
-**Runtime environment:** This just means that that Node.js allows you to run your code. Without it, you would need to use a browser to run your JavaScript code because browsers come with the built-in ability to execute JS code.
+__Runtime environment:__ This just means that that Node.js allows you to run your code. Without it, you would need to use a browser to run your JavaScript code because browsers come with the built-in ability to execute JS code.
+
+#### JavaScript with a Browser
+
+There are some differences in running JS using a browser vs. using Node.js. Since JS was originally built to be used with a browser, let's start there.
+
+With the browser runtime, JavaScript is able to access the Document Object Model (DOM), which is a programming interface for web documents.[^3] In simpler terms, the DOM allows JS to access and change elements in an HTML document. When a web page is loaded in your browser, the browser creates a Document Object Model of the page.[^4] This model allows JavaScript to create **dynamic** HTML. JavaScript can create, edit, or remove any HTML elements, attributes, or events within the page. It can also change the stle of the page by editing all the CSS styles within the page.
+
+[^3]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[^4]: https://www.w3schools.com/js/js_htmldom.asp
+
+On the other hand, 
+
+https://www.freecodecamp.org/news/what-is-node-js/
 
 ### Integrated Developer Environment
 
