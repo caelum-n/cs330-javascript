@@ -33,3 +33,4 @@ ___
   - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   - [devdocs.io](https://devdocs.io/javascript/)
 - [w3schools](https://www.w3schools.com)
+  - [javascript tutorials](https://www.w3schools.com/js/)

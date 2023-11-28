@@ -33,6 +33,8 @@ a computer program that directly executes instructions written in a programming 
 ### machine code
 
 ### markup language
+https://en.wikipedia.org/wiki/Markup_language
+a genre of file format (ex: html, xml); a set of symbols inserted into a text file which contsrols the structure and formatting of the text for display or processing
 
 ### scripting language
 https://en.wikipedia.org/wiki/Scripting_language
