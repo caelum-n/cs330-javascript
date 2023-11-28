@@ -1,0 +1,154 @@
+#container {
+    border: solid;
+    width: 1125px;
+    height: 225px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#button {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.safe-lane {
+    background-color: lightgreen;
+    width: 1125px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.road-lane {
+    background-color: grey;
+    width: 1125px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.river-lane {
+    background-color: dodgerblue;
+    width: 1125px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+    outline: solid;
+    display: inline;
+    flex-wrap: wrap;
+}
+
+#frog {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+
+#frog::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: floralwhite;
+    border-radius: 2px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#frog::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: floralwhite;
+    border-radius: 2px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.truck {
+    width: 70px;
+    height: 20px;
+    margin: 0;
+    display: inline-flex;
+    position: relative;
+}
+
+.cargo {
+    width: 20px;
+    height: 20px;
+    background-color: lightgrey;
+}
+
+.cabin {
+    width: 30px;
+    height: 20px;
+    background-color: darkgrey;
+    border-radius: 5px;
+}
+
+.cabin::after {
+    content: '';
+    width: 5px;
+    height: 15px;
+    background-color: lightgray;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.car {
+    width: 40px;
+    height: 20px;
+    margin: 0;
+    display: inline-flex;
+}
+
+.car-front {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 0 5px 5px 0;
+}
+
+.car-front::before {
+    content: '';
+    width: 5px;
+    height: 15px;
+    background-color: lightblue;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 5px;
+    border-radius: 1px;
+}
+
+.car-back {
+    width: 20px;
+    height: 20px;
+    background-color: slategrey;
+    border-radius: 5px 0 0 5px;
+}
+
+.car::before {
+    content: '';
+    width: 5px;
+    height: 15px;
+    background-color: lightblue;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 5px;
+    border-radius: 1px;
+}
