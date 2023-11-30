@@ -10,7 +10,7 @@ ___
 - [Data Types](/2_dataTypes.md)
 - [Functions](/3_functions.md)
 - [Loops and More](/4_loopsAndMore.md)
-- [PLP5]
+- [Classes and Inheritance](/5_classesAndInheritance.md)
 
 ## Helpful Resources
 

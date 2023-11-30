@@ -64,7 +64,7 @@ ___
 
 ## Your First Program
 
-I have created a folder of sample code files, which can be found [here](/codeFiles/). To start, download the folder of
+I have created a folder of sample code files, which can be found [here](/demoCodeFiles/). To start, download the folder of
 sample files. Once you've done that, try opening helloWorld.js in your IDE. The first line should look like this:
 
 `

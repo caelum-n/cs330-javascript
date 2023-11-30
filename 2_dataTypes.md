@@ -36,9 +36,9 @@ console.log(sum); // display sum
 | **try**      | **typeof**     | **var**          | **void**      |
 | **volatile** | **while**      | **with**         | **yield**     |
 
-Keywords in any language can and do change as the language is updated. The words listed below have been removed as 
-reserved words in ECMAScript 5/6, but should not be used as variable names because  not all browsers support the 
-newest version. Using these older keywords can still cause errors if they are used and  then the code is run on an 
+Keywords in any language can and do change as the language is updated. The words listed below have been removed as
+reserved words in ECMAScript 5/6, but should not be used as variable names because not all browsers support the
+newest version. Using these older keywords can still cause errors if they are used and then the code is run on an
 older browser.
 
 | abstract         | boolean    | byte          | char         |
@@ -124,7 +124,71 @@ JavaScript has seven primitive (not an object) types. All primitive types are im
 - symbol
 - null
 
-Operators
+### Operators
+
+#### Arithmetic Operators
+
+These operators are used to perform arithmetic on numbers/variables containing numbers.
+
+| Symbol | Operation                    |
+|--------|------------------------------|
+| +      | Addition                     |
+| -      | Subtraction                  |
+| *      | Multiplication               |
+| **     | Exponentiation               |
+| /      | Division                     |
+| %      | Modulus (Division Remainder) |
+| ++     | Increment                    |
+| --     | Decrement                    |
+
+
+> [!NOTE]
+> Adding two variables of the number type will return the sum, but adding a number and a string will return a 
+concatenated string, even if the string contains a number, such as shown below:
+
+
+#### Assignment Operators
+
+These operators are used to assign a value to a variable.
+
+| Symbol | Operation                                                              | Example     | Same Operation As |
+|--------|------------------------------------------------------------------------|-------------|-------------------|
+| =      | Assign a value to a variable                                           | `let x = 5` |                   |
+| +=     | Add a value to a variable and assign the answer to the variable        | `x += 1`    | `x = x + 1`       |
+| -=     | Subtract a value from a variable and assign the answer to the variable | `x -= 2`    | `x = x - 2`       |
+| *=     | Multiply a variable by a value and assign the answer to the variable   | `x *= 5`    | `x = x * 5`       |
+| /=     | Divide a variable by a value and assign the answer to the variable     | `x /= y`    | `x = x / y`       |
+| %=     | Modulus operation (and assign the answer to the variable)              | `x %= y`    | `x = x % y`       |
+| **=    | Exponentiation operation (and assign the answer to the variable)       | `x **= 3`   | `x = x ** 3`      |
+
+#### Comparison Operators
+
+These (and logical operators below) are used to determine if a statement is `true` or `false`.
+
+| Symbol | Operation                             |
+|--------|---------------------------------------|
+| ==     | equal to                              |
+| ===    | equal value **and** equal type        |
+| !=     | not equal                             |
+| !==    | not equal value **or** not equal type |
+| >      | greater than                          |
+| <      | less than                             |
+| >=     | greater than **or** equal to          |
+| <=     | less than **or** equal to             |
+| >?     | ternary operator                      |
+
+#### Logical Operators
+
+#### String Operators
+
+#### Bitwise Operators
+
+#### Ternary Operators
+
+#### Type Operators
+
+https://www.w3schools.com/js/js_operators.asp
+
 8. Are mixed type operations allowed? If so, how are they accommodated?
 
 JavaScript does have two mutable variables:
