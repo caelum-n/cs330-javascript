@@ -283,7 +283,7 @@ The above comparison operators can also be used on strings. However, strings wil
 #### Logical Operators
 
 These operators are also used to determine if a statement is `true` or `false`. These add a layer to comparison
-operators by allowing you to evaluate multiple expressions at a time as well as how they relate to each other.
+operators by allowing you to evaluate multiple expressions at a time as well as how they relate to each other.[^9]
 
 | Symbol | Operation   | Example                                                                              |
 |--------|-------------|--------------------------------------------------------------------------------------|
@@ -299,7 +299,7 @@ if (x == y) // expression one
 if (a == b) // expression two
 ```
 
-Logical operators allow you to evaluate both in one step and make decisions based on which one(s) is/are true:[^9]
+Logical operators allow you to evaluate both in one step and make decisions based on which one(s) is/are true:
 
 ``` 
 if (x==y && a==b) // if both expressions are true
@@ -325,7 +325,7 @@ const thisVar = "Hello";
 console.log(typeof thisVar); // output: string
 ```
 
-#### Bitwise Operators[^9]
+#### Bitwise Operators[^10]
 
 | Operator	 | Name	                 | Description                                                                                              |
 |-----------|-----------------------|----------------------------------------------------------------------------------------------------------|
@@ -337,7 +337,7 @@ console.log(typeof thisVar); // output: string
 | \>\>      | Signed right shift    | Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off |
 | \>\>\>    | Zero fill right shift | Shifts right by pushing zeros in from the left, and let the rightmost bits fall off                      |
 
-[^9]: https://www.w3schools.com/js/js_bitwise.asp
+[^10]: https://www.w3schools.com/js/js_bitwise.asp
 
 #### Ternary Operator
 
