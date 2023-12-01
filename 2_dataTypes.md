@@ -1,8 +1,8 @@
 # Data Types In JavaScript
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+## Variables
 
-## Let's Review Variables
+### What Are Variables Again?
 
 In programming, variables are used to label and store data in computer memory for future use. You can think of them as
 containers for storing information you might need later. For example, we might want to store two numbers, so later in
@@ -15,6 +15,53 @@ num2 = 15;
 sum = num1 + num2; // calculate sum of num1 & num2
 console.log(sum); // display sum
 ```
+
+### Declaring (Creating) variables
+
+There are four ways to declare a variable in JS.
+
+- Automatically (implicitly)
+- Using var
+- Using let
+- Using const
+
+Although JavaScript will run code with implicitly declared variables, it is a good idea to always declare variables. In
+fact, here are some good rules of thumb when it comes to variables in JavaScript:[^1]
+
+[^1]: https://www.w3schools.com/js/js_variables.asp
+
+1. Always declare variables
+2. Always use const if the **value** should not be changed
+3. Always use const if the **type** should not be changed _(Arrays and Objects)_
+4. Only use let if you can't use const
+5. Only use var if you need to support old browsers
+
+_When in doubt, declare your variable with **const**_.
+
+### Naming Variables
+
+Like any programming language, JavaScript has its own rules about what names you can give to the variables in your
+code. This ensures that the JS engine correctly identifies a variable name when it comes up in your code.
+
+Variables in JavaScript must start with a letter, an underscore `_`, or a dollar sign `$` and may not contain spaces.
+Variables are also case-sensitive, meaning that `y` and `Y` are two different variables. You may not use any reserved
+words (words which already have a specific meaning in JS, such as `const` or `while`) as a variable name.[^2] Below
+is a list of the reserved words in JavaScript.
+
+[^2]: https://www.javascript.com/learn/variables
+
+By convention, JavaScript variable names are written in camelCase. Not doing so could be considered bad coding
+practice, but will not hinder you from running your code.[^3] Another good practice in naming variables in general is to
+set descriptive names that indicate a variable's content and/or usage. In JS specifically, it can be useful to
+include information about data type, as variables are implicitly typed.[^4]
+
+[^3]: https://www.w3schools.com/js/js_conventions.asp
+
+[^4]: https://sentry.io/answers/naming-variables-in-javascript/
+
+For example, in a line of code such as `const order = tempOrder;` might contain a string, an object,
+or an order ID number. Adding more information to the name, such as `orderNum` or `orderName` or even `orderObj`
+can clarify for a reader (including your future self) what you intended a variable to do and how it works.
 
 ### Reserved words
 
@@ -39,7 +86,7 @@ console.log(sum); // display sum
 Keywords in any language can and do change as the language is updated. The words listed below have been removed as
 reserved words in ECMAScript 5/6, but should not be used as variable names because not all browsers support the
 newest version. Using these older keywords can still cause errors if they are used and then the code is run on an
-older browser.
+older browser.[^5]
 
 | abstract         | boolean    | byte          | char         |
 |------------------|------------|---------------|--------------|
@@ -47,67 +94,105 @@ older browser.
 | **int**          | **long**   | **native**    | **short**    |
 | **synchronized** | **throws** | **transient** | **volatile** |
 
-https://www.w3schools.com/js/js_reserved.asp
+[^5]: https://www.w3schools.com/js/js_reserved.asp
 
-### Naming Variables
+## Type Style
 
-**Requirements**
+JavaScript is a **dynamically typed** language, which means that _type checking_ (the process of verifying and
+enforcing the constraints of a variable's type on its value(s)) of a program is checked at runtime. This differs
+from a **statically typed** language, where type checking happens at compile time. Python is another example of a
+dynamically typed language.
 
-ou may not use any reserved words.
-Variables should be written in camelCase. camelCase is a method that allows you to separate words in a phrase by making the first letter of each word capitalize, helping you to not use spaces.
-Names can contain letters, digits, underscores, and dollar signs.
-Names should begin with a letter and can also begin with $ and _ .
-Names are case sensitive (y and Y are different variables).
+JavaScript is also a **weakly typed** language. Weakly-typed languages convert between unrelated types implicitly.
+On the other hand, a **strongly-typed** language requires explicit conversions between unrelated types. An
+example, shown below, is that JavaScript allows you to assign an integer to a variable that currently holds a string.
+[^6]
 
-**Conventions**
-What about naming conventions? Are those enforced by the compiler/interpreter, or just
-standards in the community?
+| JavaScript                                                     | Java                                                                                           |
+|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| ```// allowed code ```<br/>```let x = "6";```<br/>```x = 2 ``` | ```// to do the same in Java```<br/>```String x = "6"```<br/>```int y = Integer.parseInt(x)``` |
 
-## Declaring variables
+You can also see in the example below that JS allows implicit type conversions. Using console.log(), we can print
+the variable's data type first after assigning a string and then after reassigning a number and view the difference.
 
-There are four ways to declare a variable in JS.
+```
+let x = "5";
+console.log(typeof x) // output: string
+x = 5
+console.log(typeof x) // output: number
+```
 
-- Automatically (implicitly)
-- Using var
-- Using let
-- Using const
+Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of a variable.
+In simpler terms, one declares both a string and an int using "const".
 
-Although JavaScript allows implicitly declared variables, it is a good idea to always declare variables. In fact,
-here are some good rules of thumb when it comes to variables in JavaScript:
+``` 
+// both string and int declared with "const"
+const x = "6";
+const y = 2
+```
 
-1. Always declare variables
-2. Always use const if the **value** should not be changed
-3. Always use const if the **type** should not be changed _(Arrays and Objects)_
-4. Only use let if you can't use const
-5. Only use var if you need to support old browsers
-
-_When in doubt, declare your variable with **const**_.
-
-### Data Types
+## Data Types
 
 All data types in JavaScript can be categorized into two groups: **Primitive** types and **Reference** types.
 
-JavaScript has seven primitive (not an object) types. All primitive types are immutable. The types are:
+JavaScript has five basic primitive (not an object) types which are immutable and represented at the lowest level of
+the language. These data types are:
 
-- string
-- number
-- bigint
-- boolean
-- undefined
-- symbol
-- null
+| Type    | Example                                               |
+|---------|-------------------------------------------------------|
+| string  | `const name = "John";`                                |
+| number  | `const width = 16;`                                   |
+| bigint  | `const x = BigInt("123456789012345678901234567890");` |
+| boolean | `const x = true;`                                     |
+| symbol  |                                                       |
 
-JavaScript does have two mutable variables:
+> [!NOTE]
+> Javascript numbers are always one type: double (64-bit floating point).
+> JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be
+> represented by a normal JavaScript Number.[^7]
 
-- array/list
-- dictionary (sometimes called a hash or a map, depending on your language)
+Each of these primitive types has a corresponding Object Wrapper types, which add useful methods of working with
+primitive types alongside object types. For example, the primitive type `number` has an Object Wrapper Type of
+`Number` which allows for useful operations using methods like `toExponential()`.[^6]
+
+There are two more primitive types that are slightly more complicated. These are:
+
+| Type      | Example                                               | Not the Same as Empty[^7]                      |
+|-----------|-------------------------------------------------------|------------------------------------------------|
+| undefined | `const dog; // Value is undefined, type is undefined` | `let car = ""; // Value is "", type is string` |
+| null      |                                                       |
+
+The null type holds one value: `null`. The undefined type holds one value: `undefined`. These types represent an
+absence, rather than presence, of a value. The main difference lies in that `undefined` represents the lack of a value
+while`null` represents the lack of an object.
+
+For this reason, if you were to use the method `typeof` on the null type it would return "object", because it
+represents the absence of such an object. However, neither of these types have a corresponding Object Wrapper type.[^6]
+
+[^6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+
+[^7]: https://www.w3schools.com/js/js_datatypes.asp
+
+### The Object Data Type
+
+The last data type in JavaScript is the Object type. An Object can contain:
+
+| Type      | Example                                              |
+|-----------|------------------------------------------------------|
+| An object | `const person = {firstName:"John", lastName:"Doe"};` |
+| An array  | `const fruits = ["apple", "banana", "orange"];`      |
+| A date    | `const date = new Date("2023-11-30");`               |
+
+Can you put different data types in the same array or list?
 
 
-9. At what point are identifier names and operator symbols bound in your language? For example
-   if you declare a (variable, class name, function name), when is it bound to the type, address? When are
-   operators (+,*, etc.) bound to their operations?
+[//]: # (At what point are identifier names and operator symbols bound in your language? For example)
 
-### Operators
+[//]: # (if you declare a &#40;variable, class name, function name&#41;, when is it bound to the type, address? When are)
+
+[//]: # (operators &#40;+,*, etc.&#41; bound to their operations?)
+
+## Operators
 
 #### Arithmetic Operators
 
@@ -173,62 +258,18 @@ These (and logical operators below) are used to determine if a statement is `tru
 
 #### Type Operators
 
-8. Are mixed type operations allowed? If so, how are they accommodated?
+Are mixed type operations allowed? If so, how are they accommodated?
 
 https://www.w3schools.com/js/js_operators.asp
 
-## Type Style
-
-JavaScript is a **dynamically typed** language, which means that _type checking_ (the process of verifying and
-enforcing the constraints of a variable's type on its value(s)) of a program is checked at runtime. This differs
-from a **statically typed** language, where type checking happens at compile time. Python is another example of a
-dynamically typed language.
-
-JavaScript is also a **weakly typed** language. Weakly-typed languages convert between unrelated types implicitly.
-On the other hand, a **strongly-typed** language requires explicit conversions between unrelated types. An
-example, shown below, is that JavaScript allows you to assign an integer to a variable that currently holds a string.
-
-| JavaScript                                                     | Java                                                                                           |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| ```// allowed code ```<br/>```let x = "6";```<br/>```x = 2 ``` | ```// to do the same in Java```<br/>```String x = "6"```<br/>```int y = Integer.parseInt(x)``` |
-
-You can also see in the example below that JS allows implicit type conversions. Using console.log(), we can print
-the variable's data type first after assigning a string and then after reassigning a number and view the difference.
-
-```
-let x = "5";
-console.log(typeof x) // output: string
-x = 5
-console.log(typeof x) // output: number
-```
-
-Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of a variable.
-In simpler terms, one declares both a string and an int using "const".
-
-``` 
-// both string and int declared with "const"
-const x = "6";
-const y = 2
-```
-
-## Good Practices
-
-https://www.w3schools.com/js/js_variables.asp
-naming conventions in your language for variables
-are they case sensitive?
-do they have to start with lower case letters?
-Can they start with numbers? Symbols?
-do programmers use underscores, as in "last_name",
-or do they use camel case (lastName)?
-
-illustrate the important data type and operations features
 experiments with different operations applied on variables of the same data type
 and operations with variables of two different types: e.g.
 can you add ints and floats?
+
 Is the resulting variable an int (narrowing conversion) or a float (widening conversion)?
+
 What about division?
-Can you put different data types in the same array or list?
-Can one data type be converted to another either implicitly or explicitly (int to float, string to int, etc)?
+
 
 Conclusion
 

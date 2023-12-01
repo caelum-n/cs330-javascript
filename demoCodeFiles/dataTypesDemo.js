@@ -5,6 +5,19 @@ This demo code shows examples of data types in JS and how variables and the data
 /* ----------------------------------------------
 DATA TYPES
 ------------------------------------------------- */
+// STRINGS
+
+// NUMBERS
+
+// BIGINT
+
+// BOOLEAN
+
+// SYMBOLS
+
+// OBJECT
+
+const list = [1, 2, 3]
 
 // JS is a weakly-typed language
 // this means it allows implicit conversions between unrelated variable types
@@ -16,6 +29,7 @@ console.log(typeof x) // output: number
 // both string and int declared with "const"
 const stringVar = "6";
 const intVar = 2
+
 
 /* ----------------------------------------------
 OPERATORS
