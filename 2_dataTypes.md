@@ -36,6 +36,7 @@ fact, here are some good rules of thumb when it comes to variables in JavaScript
 4. Only use let if you can't use const
 5. Only use var if you need to support old browsers
 
+> [!TIP]
 > _When in doubt, declare your variable with **const**_.
 
 ### Naming Variables
