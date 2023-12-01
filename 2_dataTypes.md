@@ -33,11 +33,8 @@ fact, here are some good rules of thumb when it comes to variables in JavaScript
 1. Always declare variables
 2. Always use const if the **value** should not be changed
 3. Always use const if the **type** should not be changed _(Arrays and Objects)_
-4. Only use let if you can't use const
+4. Only use let if you can't use const _(any variable that will change)_
 5. Only use var if you need to support old browsers
-
-> [!TIP]
-> _When in doubt, declare your variable with **const**_.
 
 ### Naming Variables
 
@@ -65,6 +62,8 @@ or an order ID number. Adding more information to the name, such as `orderNum` o
 can clarify for a reader (including your future self) what you intended a variable to do and how it works.
 
 ### Reserved words
+
+This list of reserved words cannot be used for variable names or function names.[^5]
 
 |   abstract   |   arguments    |      await       |    boolean    |
 |:------------:|:--------------:|:----------------:|:-------------:|
@@ -95,6 +94,16 @@ older browser.[^5]
 |     **int**      |  **long**  |  **native**   |  **short**   |
 | **synchronized** | **throws** | **transient** | **volatile** |
 
+Lastly, JavaScript has some built-in Objects, Properties, and Methods which should be treated as reserved words.[^5]
+This means to avoid them even if some, such as some method names, might technically allow you to use them.
+
+|       Array        |     Date     |      eval      |   function    |
+|:------------------:|:------------:|:--------------:|:-------------:|
+| **hasOwnProperty** | **Infinity** |  **isFinite**  |   **isNaN**   |
+| **isPrototypeOf**  |  **length**  |    **Math**    |    **NaN**    |
+|     **name**	      |  **Number**  |   **Object**   | **prototype** |
+|     **String**     | **toString** | 	**undefined** |  **valueOf**  |
+
 [^5]: https://www.w3schools.com/js/js_reserved.asp
 
 ## Type Style
@@ -123,7 +132,7 @@ x = 5
 console.log(typeof x) // output: number
 ```
 
-Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of a variable.
+Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of variables.
 In simpler terms, one declares both a string and an int using "const".
 
 ``` 
@@ -139,18 +148,23 @@ All data types in JavaScript can be categorized into two groups: **Primitive** t
 JavaScript has five basic primitive (not an object) types which are immutable and represented at the lowest level of
 the language. These data types are:
 
-| Type    | Example                                               |
-|---------|-------------------------------------------------------|
-| string  | `const name = "John";`                                |
-| number  | `const width = 16;`                                   |
-| bigint  | `const x = BigInt("123456789012345678901234567890");` |
-| boolean | `const x = true;`                                     |
-| symbol  |                                                       |
+| Type    | Example                                    |
+|---------|--------------------------------------------|
+| string  | `const name = "John";`                     |
+| number  | `const width = 16;`                        |
+| bigint  | `const x = 123456789012345678901234567890` |
+| boolean | `const x = true;`                          |
+| symbol  | ***                                        |
+
+*** A Symbol is a unique and immutable primitive value often used as an identifier or key. In some programming
+languages, Symbols are called "atoms".[^7]
+
+[^7]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 
 > [!NOTE]
 > Javascript numbers are always one type: double (64-bit floating point).
 > JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be
-> represented by a normal JavaScript Number.[^7]
+> represented by a normal JavaScript Number.[^8]
 
 Each of these primitive types has a corresponding Object Wrapper types, which add useful methods of working with
 primitive types alongside object types. For example, the primitive type `number` has an Object Wrapper Type of
@@ -158,7 +172,7 @@ primitive types alongside object types. For example, the primitive type `number`
 
 There are two more primitive types that are slightly more complicated. These are:
 
-| Type      | Example                                               | Not the Same as Empty[^7]                      |
+| Type      | Example                                               | Not the Same as Empty[^8]                      |
 |-----------|-------------------------------------------------------|------------------------------------------------|
 | undefined | `const dog; // Value is undefined, type is undefined` | `let car = ""; // Value is "", type is string` |
 | null      |                                                       |
@@ -167,31 +181,42 @@ The null type holds one value: `null`. The undefined type holds one value: `unde
 absence, rather than presence, of a value. The main difference lies in that `undefined` represents the lack of a value
 while`null` represents the lack of an object.
 
-For this reason, if you were to use the method `typeof` on the null type it would return "object", because it
+For this reason, if you were to use the `typeof` operator on the null type it would return "object", because it
 represents the absence of such an object. However, neither of these types have a corresponding Object Wrapper type.[^6]
 
 [^6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
-[^7]: https://www.w3schools.com/js/js_datatypes.asp
+[^8]: https://www.w3schools.com/js/js_datatypes.asp
 
 ### The Object Data Type
 
-The last data type in JavaScript is the Object type. An Object can contain:
+The last data type in JavaScript is the Object type. This is a kind of variable that can hold many values. Objects
+can be declared with an object literal, such as below:
 
-| Type      | Example                                              |
-|-----------|------------------------------------------------------|
-| An object | `const person = {firstName:"John", lastName:"Doe"};` |
-| An array  | `const fruits = ["apple", "banana", "orange"];`      |
-| A date    | `const date = new Date("2023-11-30");`               |
+```
+const person = {
+    firstName: "Amelia", 
+    lastName: "Pond"
+    };
+```
 
-Can you put different data types in the same array or list?
+This means listing the properties of the object using `key:value` pairs (this may seem
+familiar if you've used Dictionaries in Python). You can also declare a new Object using the keyword `new`:
 
+```
+const person = new Person();
+```
 
-[//]: # (At what point are identifier names and operator symbols bound in your language? For example)
+In JavaScript, an Object type can also contain an array (list) or a date.
 
-[//]: # (if you declare a &#40;variable, class name, function name&#41;, when is it bound to the type, address? When are)
+| Type      | Example                                                 |
+|-----------|---------------------------------------------------------|
+| An object | `const person = {firstName:"Donna", lastName:"Noble"};` |
+| An array  | `const fruits = ["apple", "banana", "orange"];`         |
+| A date    | `const date = new Date("2023-11-23");`                  |
 
-[//]: # (operators &#40;+,*, etc.&#41; bound to their operations?)
+> [!TIP]
+> Notice that while a Date object requires the keyword `new`, arrays do not.
 
 ## Operators
 
@@ -221,7 +246,7 @@ let addString = "5" + 5; // returns: "55"
 
 #### Assignment Operators
 
-These operators are used to assign a value to a variable.
+These operators are used to assign a value to a variable.[^8]
 
 | Symbol | Operation                                                              | Example     | Same Operation As |
 |--------|------------------------------------------------------------------------|-------------|-------------------|
@@ -235,7 +260,7 @@ These operators are used to assign a value to a variable.
 
 #### Comparison Operators
 
-These (and logical operators below) are used to determine if a statement is `true` or `false`.
+These (and logical operators below) are used to determine if a statement is `true` or `false`.[^8].[^9]
 
 | Symbol | Operation                             |
 |--------|---------------------------------------|
@@ -243,40 +268,84 @@ These (and logical operators below) are used to determine if a statement is `tru
 | ===    | equal value **and** equal type        |
 | !=     | not equal                             |
 | !==    | not equal value **or** not equal type |
-| >      | greater than                          |
+| \>     | greater than                          |
 | <      | less than                             |
-| >=     | greater than **or** equal to          |
+| \>=    | greater than **or** equal to          |
 | <=     | less than **or** equal to             |
-| >?     | ternary operator                      |
-
-#### Logical Operators
+| \>?    | ternary operator (see below)          |
 
 #### String Operators
 
-#### Bitwise Operators
+The above comparison operators can also be used on strings. However, strings will be compared alphabetically.[^8]
 
-#### Ternary Operators
+[^8]: https://www.w3schools.com/js/js_operators.asp
 
-#### Type Operators
+#### Logical Operators
 
-Are mixed type operations allowed? If so, how are they accommodated?
+These operators are also used to determine if a statement is `true` or `false`. These add a layer to comparison
+operators by allowing you to evaluate multiple expressions at a time as well as how they relate to each other.
 
-https://www.w3schools.com/js/js_operators.asp
+| Symbol | Operation   | Example                                                                              |
+|--------|-------------|--------------------------------------------------------------------------------------|
+| &&     | logical and | `if (x==y && a==b) { // if x equals y AND a equals b`<br/>`// do some code`<br/>`}`  |
+| \|\|   | logical or  | `if (x==y \|\| a==b) { // if x equals y OR a equals b`<br/>`// do some code`<br/>`}` |
+| !      | logical not | `if (x != y) { // if x DOES NOT equal y`<br/>`// do some code`<br/>`}`               |
 
-experiments with different operations applied on variables of the same data type
-and operations with variables of two different types: e.g.
-can you add ints and floats?
+For example, you can evaluate each of the following expressions separately:
 
-Is the resulting variable an int (narrowing conversion) or a float (widening conversion)?
+``` 
+if (x == y) // expression one
 
-What about division?
+if (a == b) // expression two
+```
 
-Conclusion
+Logical operators allow you to evaluate both in one step and make decisions based on which one(s) is/are true:[^9]
 
-- Limitations
-    - Describe the limitations (or lack thereof) of your programming language as they relate to the coding example
-      portion of the assignment (adding ints and floats, storing different types in lists, converting between data
-      types). Are there other restrictions or pitfalls that the documentation mentions that you need to be aware of?
+``` 
+if (x==y && a==b) // if both expressions are true
 
-Are there built-in complex data types that are commonly used in your language? (hint: they’d probably appear fairly
-early in the documentation if so)
+if (x==y || a==b) // if at least one of the expressions is true
+```
+
+The Logical Not operator can be used to negate the return value of a boolean function:
+
+```
+const aVariable = 5;
+if (isNaN(aVariable)) // returns false --> aVariable is a number
+
+if (!isNaN(aVariable)) // returns true --> isNaN() returns false, which is negated by the Logical Not operator
+```
+
+#### The typeof Operator
+
+This operator returns the type of variable, object, function or expression:
+
+``` 
+const thisVar = "Hello";
+console.log(typeof thisVar); // output: string
+```
+
+#### Bitwise Operators[^9]
+
+| Operator	 | Name	                 | Description                                                                                              |
+|-----------|-----------------------|----------------------------------------------------------------------------------------------------------|
+| &         | AND                   | Sets each bit to 1 if both bits are 1                                                                    |
+| \|        | OR                    | Sets each bit to 1 if one of two bits is 1                                                               |
+| ^         | XOR                   | Sets each bit to 1 if only one of two bits is 1                                                          |
+| ~         | NOT                   | Inverts all the bits                                                                                     |
+| <<        | Zero fill left shift  | Shifts left by pushing zeros in from the right and let the leftmost bits fall off                        |
+| \>\>      | Signed right shift    | Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off |
+| \>\>\>    | Zero fill right shift | Shifts right by pushing zeros in from the left, and let the rightmost bits fall off                      |
+
+[^9]: https://www.w3schools.com/js/js_bitwise.asp
+
+#### Ternary Operator
+
+JavaScript contains a conditional operator called a _ternary operator_ which assigns a value to a variable based on
+some condition.[^9] The syntax for this looks like `variablename = (condition) ? value1:value2`. Here is an example:
+
+```
+const heightSafety = (height < 48) ? "Too short for safety":"Tall enough to ride";
+```
+
+[^9]: https://www.w3schools.com/js/js_comparisons.asp
