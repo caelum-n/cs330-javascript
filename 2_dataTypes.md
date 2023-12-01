@@ -66,7 +66,7 @@ can clarify for a reader (including your future self) what you intended a variab
 
 ### Reserved words
 
-| abstract     | arguments      | await            | boolean       |
+| :abstract    | :arguments     | :await           | :boolean      |
 |--------------|----------------|------------------|---------------|
 | **break**    | **byte**       | **case**         | **catch**     |
 | **char**     | **class**      | **const**        | **continue**  | 
