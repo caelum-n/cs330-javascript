@@ -36,3 +36,8 @@ const mult = num1 * num2;
 
 // We can divide one variable by another with the division operator /
 const div = num1 / num2;
+
+/* Adding two variables of the number type will return the sum, but adding a number and a string will return a
+concatenated string, even if the string contains a number, such as shown below: */
+let addInt = 5 + 5; // returns: 10
+let addString = "5" + 5; // returns: "55"

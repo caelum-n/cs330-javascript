@@ -52,6 +52,13 @@ https://www.w3schools.com/js/js_reserved.asp
 ### Naming Variables
 
 **Requirements**
+
+ou may not use any reserved words.
+Variables should be written in camelCase. camelCase is a method that allows you to separate words in a phrase by making the first letter of each word capitalize, helping you to not use spaces.
+Names can contain letters, digits, underscores, and dollar signs.
+Names should begin with a letter and can also begin with $ and _ .
+Names are case sensitive (y and Y are different variables).
+
 **Conventions**
 What about naming conventions? Are those enforced by the compiler/interpreter, or just
 standards in the community?
@@ -76,40 +83,6 @@ here are some good rules of thumb when it comes to variables in JavaScript:
 
 _When in doubt, declare your variable with **const**_.
 
-## Type Style
-
-JavaScript is a **dynamically typed** language, which means that _type checking_ (the process of verifying and
-enforcing the constraints of a variable's type on its value(s)) of a program is checked at runtime. This differs
-from a **statically typed** language, where type checking happens at compile time. Python is another example of a
-dynamically typed language.
-
-JavaScript is also a **weakly typed** language. Weakly-typed languages convert between unrelated types implicitly.
-On the other hand, a **strongly-typed** language requires explicit conversions between unrelated types. An
-example, shown below, is that JavaScript allows you to assign an integer to a variable that currently holds a string.
-
-| JavaScript                                                     | Java                                                                                           |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| ```// allowed code ```<br/>```let x = "6";```<br/>```x = 2 ``` | ```// to do the same in Java```<br/>```String x = "6"```<br/>```int y = Integer.parseInt(x)``` |
-
-You can also see in the example below that JS allows implicit type conversions. Using console.log(), we can print
-the variable's data type first after assigning a string and then after reassigning a number and view the difference.
-
-```
-let x = "5";
-console.log(typeof x) // output: string
-x = 5
-console.log(typeof x) // output: number```
-```
-
-Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of a variable.
-In simpler terms, one declares both a string and an int using "const".
-
-``` 
-// both string and int declared with "const"
-const x = "6";
-const y = 2
-```
-
 ### Data Types
 
 All data types in JavaScript can be categorized into two groups: **Primitive** types and **Reference** types.
@@ -123,6 +96,16 @@ JavaScript has seven primitive (not an object) types. All primitive types are im
 - undefined
 - symbol
 - null
+
+JavaScript does have two mutable variables:
+
+- array/list
+- dictionary (sometimes called a hash or a map, depending on your language)
+
+
+9. At what point are identifier names and operator symbols bound in your language? For example
+   if you declare a (variable, class name, function name), when is it bound to the type, address? When are
+   operators (+,*, etc.) bound to their operations?
 
 ### Operators
 
@@ -141,11 +124,14 @@ These operators are used to perform arithmetic on numbers/variables containing n
 | ++     | Increment                    |
 | --     | Decrement                    |
 
-
 > [!NOTE]
-> Adding two variables of the number type will return the sum, but adding a number and a string will return a 
-concatenated string, even if the string contains a number, such as shown below:
+> Adding two variables of the number type will return the sum, but adding a number and a string will return a
+> concatenated string, even if the string contains a number, such as shown below:
 
+```
+let addInt = 5 + 5; // returns: 10
+let addString = "5" + 5; // returns: "55"
+```
 
 #### Assignment Operators
 
@@ -187,19 +173,43 @@ These (and logical operators below) are used to determine if a statement is `tru
 
 #### Type Operators
 
-https://www.w3schools.com/js/js_operators.asp
-
 8. Are mixed type operations allowed? If so, how are they accommodated?
 
-JavaScript does have two mutable variables:
+https://www.w3schools.com/js/js_operators.asp
 
-- array/list
-- dictionary (sometimes called a hash or a map, depending on your language)
+## Type Style
 
+JavaScript is a **dynamically typed** language, which means that _type checking_ (the process of verifying and
+enforcing the constraints of a variable's type on its value(s)) of a program is checked at runtime. This differs
+from a **statically typed** language, where type checking happens at compile time. Python is another example of a
+dynamically typed language.
 
-9. At what point are identifier names and operator symbols bound in your language? For example
-   if you declare a (variable, class name, function name), when is it bound to the type, address? When are
-   operators (+,*, etc.) bound to their operations?
+JavaScript is also a **weakly typed** language. Weakly-typed languages convert between unrelated types implicitly.
+On the other hand, a **strongly-typed** language requires explicit conversions between unrelated types. An
+example, shown below, is that JavaScript allows you to assign an integer to a variable that currently holds a string.
+
+| JavaScript                                                     | Java                                                                                           |
+|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| ```// allowed code ```<br/>```let x = "6";```<br/>```x = 2 ``` | ```// to do the same in Java```<br/>```String x = "6"```<br/>```int y = Integer.parseInt(x)``` |
+
+You can also see in the example below that JS allows implicit type conversions. Using console.log(), we can print
+the variable's data type first after assigning a string and then after reassigning a number and view the difference.
+
+```
+let x = "5";
+console.log(typeof x) // output: string
+x = 5
+console.log(typeof x) // output: number
+```
+
+Lastly, JavaScript is **implicitly typed**, meaning there are no explicit declarations of the data type of a variable.
+In simpler terms, one declares both a string and an int using "const".
+
+``` 
+// both string and int declared with "const"
+const x = "6";
+const y = 2
+```
 
 ## Good Practices
 
