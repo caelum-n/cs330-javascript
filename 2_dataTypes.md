@@ -66,33 +66,33 @@ can clarify for a reader (including your future self) what you intended a variab
 
 ### Reserved words
 
-| :abstract    | :arguments     | :await           | :boolean      |
-|--------------|----------------|------------------|---------------|
-| **break**    | **byte**       | **case**         | **catch**     |
-| **char**     | **class**      | **const**        | **continue**  | 
-| **debugger** | **default**    | **delete**       | **do**        |
-| **double**   | **else**       | **enum**         | **eval**      |
-| **export**   | **extends**    | **false**        | **final**     |
-| **finally**  | **float**      | **for**          | **function**  |
-| **goto**     | **if**         | **implements**   | **import**    |
-| **in**       | **instanceof** | **int**          | **interface** |
-| **let**      | **long**       | **native**       | **new**       |
-| **null**     | **package**    | **private**      | **protected** |
-| **public**   | **return**     | **short**        | **static**    |
-| **super**    | **switch**     | **synchronized** | **this**      |
-| **throw**    | **throws**     | **transient**    | **true**      |
-| **try**      | **typeof**     | **var**          | **void**      |
-| **volatile** | **while**      | **with**         | **yield**     |
+|   abstract   |   arguments    |      await       |    boolean    |
+|:------------:|:--------------:|:----------------:|:-------------:|
+|  **break**   |    **byte**    |     **case**     |   **catch**   |
+|   **char**   |   **class**    |    **const**     | **continue**  | 
+| **debugger** |  **default**   |    **delete**    |    **do**     |
+|  **double**  |    **else**    |     **enum**     |   **eval**    |
+|  **export**  |  **extends**   |    **false**     |   **final**   |
+| **finally**  |   **float**    |     **for**      | **function**  |
+|   **goto**   |     **if**     |  **implements**  |  **import**   |
+|    **in**    | **instanceof** |     **int**      | **interface** |
+|   **let**    |    **long**    |    **native**    |    **new**    |
+|   **null**   |  **package**   |   **private**    | **protected** |
+|  **public**  |   **return**   |    **short**     |  **static**   |
+|  **super**   |   **switch**   | **synchronized** |   **this**    |
+|  **throw**   |   **throws**   |  **transient**   |   **true**    |
+|   **try**    |   **typeof**   |     **var**      |   **void**    |
+| **volatile** |   **while**    |     **with**     |   **yield**   |
 
 Keywords in any language can and do change as the language is updated. The words listed below have been removed as
 reserved words in ECMAScript 5/6, but should not be used as variable names because not all browsers support the
 newest version. Using these older keywords can still cause errors if they are used and then the code is run on an
 older browser.[^5]
 
-| abstract         | boolean    | byte          | char         |
-|------------------|------------|---------------|--------------|
-| **double**       | **final**  | **float**     | **goto**     |
-| **int**          | **long**   | **native**    | **short**    |
+|     abstract     |  boolean   |     byte      |     char     |
+|:----------------:|:----------:|:-------------:|:------------:|
+|    **double**    | **final**  |   **float**   |   **goto**   |
+|     **int**      |  **long**  |  **native**   |  **short**   |
 | **synchronized** | **throws** | **transient** | **volatile** |
 
 [^5]: https://www.w3schools.com/js/js_reserved.asp
@@ -270,7 +270,6 @@ can you add ints and floats?
 Is the resulting variable an int (narrowing conversion) or a float (widening conversion)?
 
 What about division?
-
 
 Conclusion
 
