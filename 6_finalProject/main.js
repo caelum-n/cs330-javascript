@@ -1,6 +1,10 @@
 window.onload = function () {
-    const rowCount = 9;
+    const rowCount = 10;
     const colCount = 45;
+    const safeLanes = [0, 4, 9];
+    const riverLanes = [1, 2, 3];
+    const roadLanes = [5, 6, 7, 8];
+
     const body = document.body;
 
     const startBtn = document.createElement("button");
@@ -31,11 +35,11 @@ window.onload = function () {
     function initialLayout() {
         for (let i = 0; i < rowCount; i++) {
             const lane = document.createElement("div");
-            if (i === 0 || i === 4 || i === 8) {
+            if (safeLanes.includes(i)) {
                 lane.setAttribute("class", "safe-lane");
-            } else if (i === 1 || i === 2 || i === 3) {
+            } else if (riverLanes.includes(i)) {
                 lane.setAttribute("class", "river-lane");
-            } else if (i === 5 || i === 6 || i === 7) {
+            } else if (roadLanes.includes(i)) {
                 lane.setAttribute("class", "road-lane");
             }
             container.appendChild(lane);
@@ -45,6 +49,27 @@ window.onload = function () {
                 lane.appendChild(square);
                 if (i === frogLoc["y"] && j === frogLoc["x"]) {
                     square.appendChild(frog);
+                }
+                if (i === 6) {
+                    if ((j) % 5 === 0 && (j) % 15 !== 0) {
+                        const carFront = document.createElement("div");
+                        carFront.setAttribute("class", "car-front-left");
+                        square.appendChild(carFront);
+                    } else if ((j - 1) % 5 === 0 && (j - 1) % 15 !== 0) {
+                        const carBack = document.createElement("div");
+                        carBack.setAttribute("class", "car-back-left");
+                        square.appendChild(carBack);
+                    }
+                } else if (i === 8) {
+                    if ((j) % 5 === 0 && (j) % 15 !== 0) {
+                        const carFront = document.createElement("div");
+                        carFront.setAttribute("class", "car-front-right");
+                        square.appendChild(carFront);
+                    } else if ((j + 1) % 5 === 0 && (j + 1) % 15 !== 0) {
+                        const carBack = document.createElement("div");
+                        carBack.setAttribute("class", "car-back-right");
+                        square.appendChild(carBack);
+                    }
                 }
             }
         }

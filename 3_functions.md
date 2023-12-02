@@ -1,8 +1,20 @@
+# Functions in JavaScript
+
+https://www.w3schools.com/js/js_functions.asp
 Being able to repeat code through loops and functions (which can be called more than once and sent different information
 each time) is a huge part of most programming languages. However, different programming languages have different kinds
 of loops, and there are a lot of variations in how functions are declared, where they have to be put, how they accept
 parameters, and how the function output is returned. In your programming language, do the following (or explain why it
 can’t be done as described):
+
+To make a function you use the function keyword followed by the function name and then parameters inside parenthesis.
+Functions can only run when they are in scope. Javascript does support recursive functions. Functions can accept
+multiple variables within parameters, in the parentheses separated by commas. They also can be different data types. You
+can also return multiple values in the return statement by separating them with commas. Javascript functions are passed
+by value ( functions know values, not the location of the value). Javascript has global variables (declared outside the
+function) and local variables (declared inside the function). When Variables are declared their lifetime starts. When it
+is a global variable they only die when the web browser is closed. When it is a local variable they die when the
+function is completed. Local variables are also stored on the stack until the function has run.
 
 ## loops
 
