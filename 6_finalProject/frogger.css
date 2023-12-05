@@ -1,6 +1,6 @@
 #container {
-    width: 1125px;
-    height: 250px;
+    width: 1080px;
+    height: 240px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -16,95 +16,136 @@
 
 /* LANES */
 
-.safe-lane {
+.safe {
     background-color: lightgreen;
-    width: 1125px;
-    height: 25px;
+    width: 1080px;
+    height: 24px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.road-lane {
+.road {
     background-color: grey;
-    width: 1125px;
-    height: 25px;
+    width: 1080px;
+    height: 24px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.river-lane {
+.river {
     background-color: dodgerblue;
-    width: 1125px;
-    height: 25px;
+    width: 1080px;
+    height: 24px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square {
-    width: 25px;
-    height: 25px;
-    display: inline;
+    width: 24px;
+    height: 24px;
+    display: flex;
     flex-wrap: wrap;
 }
 
 /* FROG */
 
-#frog {
-    width: 25px;
-    height: 25px;
+div.contains-frog {
     background-color: green;
+}
+
+.contains-frog {
+    width: 24px;
+    height: 24px;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-#frog::before {
+.contains-frog::before {
     content: '';
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: floralwhite;
     border-radius: 2px;
     position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 6px;
+    margin-left: 6px;
 }
 
-#frog::after {
+.contains-frog::after {
     content: '';
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: floralwhite;
     border-radius: 2px;
     position: absolute;
-    margin-top: 5px;
-    margin-left: 15px;
+    margin-top: 6px;
+    margin-left: 16px;
 }
 
-/* CAR MOVING RIGHT */
+/* CAR MOVING LEFT */
 
-.car-front-right {
-    width: 25px;
-    height: 25px;
+.car-front-left {
+    width: 24px;
+    height: 24px;
     background-color: #3d3c3c;
-    border-radius: 0 5px 5px 0;
+    border-radius: 6px 0 0 6px;
 }
 
-.car-front-right::before {
+.car-front-left::before {
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: lightblue;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 12px;
+    border-radius: 1px;
+}
+
+.car-back-left {
+    width: 24px;
+    height: 24px;
+    background-color: #3d3c3c;
+    border-radius: 0 6px 6px 0;
+}
+
+.car-back-left::before {
     content: '';
     width: 5px;
     height: 18px;
     background-color: lightblue;
     position: absolute;
     margin-top: 2px;
-    margin-left: 5px;
+    margin-left: 10px;
+    border-radius: 1px;
+}
+
+/* CAR MOVING RIGHT */
+
+.car-front-right {
+    width: 24px;
+    height: 24px;
+    background-color: #3d3c3c;
+    border-radius: 0 6px 6px 0;
+}
+
+.car-front-right::before {
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: lightblue;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 6px;
     border-radius: 1px;
 }
 
 .car-back-right {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     background-color: #3d3c3c;
-    border-radius: 5px 0 0 5px;
+    border-radius: 6px 0 0 6px;
 }
 
 .car-back-right::before {
@@ -118,40 +159,104 @@
     border-radius: 1px;
 }
 
-/* CAR MOVING LEFT */
+/* TRUCK MOVING LEFT */
 
-.car-front-left {
-    width: 25px;
-    height: 25px;
-    background-color: #3d3c3c;
-    border-radius: 5px 0 0 5px;
+.truck-cabin-left {
+    width: 24px;
+    height: 24px;
+    background-color: #b13e3e;
+    border-radius: 6px 0 0 6px;
 }
 
-.car-front-left::before {
+.truck-cabin-left::before {
     content: '';
-    width: 5px;
+    width: 6px;
     height: 18px;
     background-color: lightblue;
     position: absolute;
-    margin-top: 2px;
-    margin-left: 15px;
+    margin-top: 3px;
+    margin-left: 12px;
     border-radius: 1px;
 }
 
-.car-back-left {
-    width: 25px;
-    height: 25px;
-    background-color: #3d3c3c;
-    border-radius: 0 5px 5px 0;
+.truck-cargo-left {
+    width: 24px;
+    height: 24px;
+    background-color: #c6ccd1;
 }
 
-.car-back-left::before {
+/* TRUCK MOVING RIGHT */
+
+.truck-cabin-right {
+    width: 24px;
+    height: 24px;
+    background-color: #0f4d84;
+    border-radius: 0 6px 6px 0;
+}
+
+.truck-cabin-right::before {
     content: '';
-    width: 5px;
+    width: 6px;
     height: 18px;
     background-color: lightblue;
     position: absolute;
-    margin-top: 2px;
-    margin-left: 10px;
+    margin-top: 3px;
+    margin-left: 6px;
     border-radius: 1px;
 }
+
+.truck-cargo-right {
+    width: 24px;
+    height: 24px;
+    background-color: #c6ccd1;
+}
+
+/* LOG */
+
+.log-left {
+    width: 24px;
+    height: 24px;
+    background-color: saddlebrown;
+}
+
+.log-right {
+    width: 24px;
+    height: 24px;
+    background-color: saddlebrown;
+}
+
+.long-log-left {
+    width: 24px;
+    height: 24px;
+    background-color: saddlebrown;
+}
+
+.long-log-right {
+    width: 24px;
+    height: 24px;
+    background-color: saddlebrown;
+}
+
+#lose {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #b13e3e;
+}
+
+#win {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #08a138;
+}
+
+.message-text {
+    font-size: 48px;
+    margin: auto;
+}
+
