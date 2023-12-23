@@ -1,34 +1,37 @@
 # Functions in JavaScript
+---
 
-https://www.w3schools.com/js/js_functions.asp
-Being able to repeat code through loops and functions (which can be called more than once and sent different information
-each time) is a huge part of most programming languages. However, different programming languages have different kinds
-of loops, and there are a lot of variations in how functions are declared, where they have to be put, how they accept
-parameters, and how the function output is returned. In your programming language, do the following (or explain why it
-can’t be done as described):
+## Syntax
 
-To make a function you use the function keyword followed by the function name and then parameters inside parenthesis.
-Functions can only run when they are in scope. Javascript does support recursive functions. Functions can accept
-multiple variables within parameters, in the parentheses separated by commas. They also can be different data types. You
-can also return multiple values in the return statement by separating them with commas. Javascript functions are passed
-by value ( functions know values, not the location of the value). Javascript has global variables (declared outside the
-function) and local variables (declared inside the function). When Variables are declared their lifetime starts. When it
-is a global variable they only die when the web browser is closed. When it is a local variable they die when the
-function is completed. Local variables are also stored on the stack until the function has run.
+To write a function in JavaScript, you first define use the `function` keyword, followed by the function name,
+followed by parentheses `()`. Function names follow the same rules as variables.[^1]
 
-## loops
+For any functions which takes input parameters, you can define these inside the parentheses by including parameter
+names separated by commas. Inside the function, these parameters behave as local variables.[^1]
 
-### while
+After the parentheses, the code to be executed is surrounded in curly brackets.[^1]
 
-### do/while
+As a generic formula, those rules look something like this:
 
-### for
+```
+function funcName(param1, param2) {
+    // code to run when function is called
+}
+```
 
-### foreach
+Here is a more specific example which takes 2 numbers as parameters and adds them together.
 
-Write a function that takes in two numbers, multiplies them, and returns the output
+```
+function mult(num1, num2) {
+    return num1 * num2;
+}
+```
 
-## Recursion
+In the above statement, the product of the two given numbers is returned from the function. When JavaScript reaches a
+return statement, the function will stop executing and "return" to the place in the code from where the function was
+called. The value which is returned back to whichever element called the function can be used for later code.[^1]
+
+[^1]: https://www.w3schools.com/js/js_functions.asp
 
 Write a recursive function (one that calculates a factorial is fine)
 
