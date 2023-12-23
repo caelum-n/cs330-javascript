@@ -23,6 +23,8 @@ export default class Grid extends HTMLDivElement {
     tList;
     logList;
 
+    frog;
+
     constructor() {
         super();
     }
@@ -97,7 +99,7 @@ export default class Grid extends HTMLDivElement {
                 }
                 this.appendChild(sq);
                 if (loc === fl) {
-                    new Frog(loc);
+                    this.frog = new Frog(loc);
                 }
             }
         }
@@ -163,6 +165,10 @@ export default class Grid extends HTMLDivElement {
 
     getSquare(loc) {
         return this.children.item(loc);
+    }
+
+    getFrog() {
+        return this.frog;
     }
 
     getCarList() {

@@ -63,13 +63,13 @@ export default class Frog {
         this.hideFrog();
         if (this.sq.classList.contains("left")) {
             let newLoc = loc - 1;
-            if ((loc + 1) % this.cols === 0) {
+            if (loc % this.cols === 0) {
                 document.getElementById("container").lose();
             }
             this.sq = document.getElementById("container").getSquare(newLoc);
         } else if (this.sq.classList.contains("right")) {
             let newLoc = loc + 1;
-            if (loc % this.cols === 0) {
+            if ((loc + 1) % this.cols === 0) {
                 document.getElementById("container").lose();
             }
             this.sq = document.getElementById("container").getSquare(newLoc);

@@ -55,7 +55,8 @@ export default class Log {
         const loc = this.front.getLocation();
         this.hideLog();
         if (this.front.hasFrog() || this.two.hasFrog() || this.three.hasFrog()) {
-            document.querySelector(".contains-frog").autoMoveFrog();
+            const frog = document.getElementById("container").getFrog();
+            frog.autoMoveFrog();
         }
         if (this.front.classList.contains("left")) {
             let newLoc = loc - 1;
