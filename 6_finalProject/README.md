@@ -1,0 +1,1 @@
+This does not work on Safari web browser.

@@ -1,12 +1,18 @@
-#container {
-    width: 1080px;
-    height: 240px;
-    margin: auto;
+div {
+    width: 24px;
+    height: 24px;
     display: flex;
     flex-wrap: wrap;
 }
 
-#button {
+#container {
+    width: 1080px;
+    height: 240px;
+    margin: auto;
+}
+
+#start-btn {
+    font-size: 48px;
     width: max-content;
     height: max-content;
     display: flex;
@@ -14,37 +20,27 @@
     margin: auto;
 }
 
+#replay-btn {
+    font-size: 48px;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* LANES */
 
 .safe {
     background-color: lightgreen;
-    width: 1080px;
-    height: 24px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .road {
     background-color: grey;
-    width: 1080px;
-    height: 24px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .river {
     background-color: dodgerblue;
-    width: 1080px;
-    height: 24px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.square {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /* FROG */
@@ -54,10 +50,6 @@ div.contains-frog {
 }
 
 .contains-frog {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-wrap: wrap;
     border-radius: 12px;
 }
 
@@ -85,14 +77,12 @@ div.contains-frog {
 
 /* CAR MOVING LEFT */
 
-.car-front-left {
-    width: 24px;
-    height: 24px;
+.car-front.left {
     background-color: #3d3c3c;
     border-radius: 6px 0 0 6px;
 }
 
-.car-front-left::before {
+.car-front.left::before {
     content: '';
     width: 6px;
     height: 18px;
@@ -103,14 +93,12 @@ div.contains-frog {
     border-radius: 1px;
 }
 
-.car-back-left {
-    width: 24px;
-    height: 24px;
+.car-back.left {
     background-color: #3d3c3c;
     border-radius: 0 6px 6px 0;
 }
 
-.car-back-left::before {
+.car-back.left::before {
     content: '';
     width: 5px;
     height: 18px;
@@ -123,14 +111,14 @@ div.contains-frog {
 
 /* CAR MOVING RIGHT */
 
-.car-front-right {
+.car-front.right {
     width: 24px;
     height: 24px;
     background-color: #3d3c3c;
     border-radius: 0 6px 6px 0;
 }
 
-.car-front-right::before {
+.car-front.right::before {
     content: '';
     width: 6px;
     height: 18px;
@@ -141,14 +129,14 @@ div.contains-frog {
     border-radius: 1px;
 }
 
-.car-back-right {
+.car-back.right {
     width: 24px;
     height: 24px;
     background-color: #3d3c3c;
     border-radius: 6px 0 0 6px;
 }
 
-.car-back-right::before {
+.car-back.right::before {
     content: '';
     width: 5px;
     height: 18px;
@@ -161,14 +149,12 @@ div.contains-frog {
 
 /* TRUCK MOVING LEFT */
 
-.truck-cabin-left {
-    width: 24px;
-    height: 24px;
+.truck-cabin.left {
     background-color: #b13e3e;
     border-radius: 6px 0 0 6px;
 }
 
-.truck-cabin-left::before {
+.truck-cabin.left::before {
     content: '';
     width: 6px;
     height: 18px;
@@ -179,22 +165,18 @@ div.contains-frog {
     border-radius: 1px;
 }
 
-.truck-cargo-left {
-    width: 24px;
-    height: 24px;
+.truck-cargo.left {
     background-color: #c6ccd1;
 }
 
 /* TRUCK MOVING RIGHT */
 
-.truck-cabin-right {
-    width: 24px;
-    height: 24px;
+.truck-cabin.right {
     background-color: #0f4d84;
     border-radius: 0 6px 6px 0;
 }
 
-.truck-cabin-right::before {
+.truck-cabin.right::before {
     content: '';
     width: 6px;
     height: 18px;
@@ -205,35 +187,13 @@ div.contains-frog {
     border-radius: 1px;
 }
 
-.truck-cargo-right {
-    width: 24px;
-    height: 24px;
+.truck-cargo.right {
     background-color: #c6ccd1;
 }
 
 /* LOG */
 
-.log-left {
-    width: 24px;
-    height: 24px;
-    background-color: saddlebrown;
-}
-
-.log-right {
-    width: 24px;
-    height: 24px;
-    background-color: saddlebrown;
-}
-
-.long-log-left {
-    width: 24px;
-    height: 24px;
-    background-color: saddlebrown;
-}
-
-.long-log-right {
-    width: 24px;
-    height: 24px;
+.log {
     background-color: saddlebrown;
 }
 
@@ -241,8 +201,6 @@ div.contains-frog {
     width: 400px;
     height: 200px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #b13e3e;
 }
 
@@ -250,13 +208,12 @@ div.contains-frog {
     width: 400px;
     height: 200px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #08a138;
 }
 
-.message-text {
-    font-size: 48px;
+div.message-text {
+    width: max-content;
+    text-align: center;
+    font-size: 24px;
     margin: auto;
 }
-
